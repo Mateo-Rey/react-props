@@ -4,12 +4,14 @@ import Menubar from './components/Menubar.jsx';
 import Main from './components/Main.jsx';
 import Footer from './components/Footer.jsx';
 import { useState } from 'react';
+import Coffee from './components/coffee';
 function App() {
-  const [name, setName] = useState('Mason')
+  const [name, setName] = useState('')
   return (
     <>
-    <Menubar/>
-    <Main name={name}  total={23}/>
+    <Menubar name={name} setName={setName}/>
+    <Main name={name} />
+    <Coffee/>
     <Footer/>
     </>
    
