@@ -1,7 +1,6 @@
 import React from "react";
 
-function Main(props) {
-    const {name, total} = props;
+function Main({name, total}) {
     return (
     <main>
         <h1><b>Hello {name} </b></h1>
