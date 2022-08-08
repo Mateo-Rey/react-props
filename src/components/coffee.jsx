@@ -8,6 +8,14 @@ export default function Coffee() {
         .then(data => setCoffeeList(data))
         .catch(err => alert(err))
     }
+    const getCoffeeSync = async (temperature) => {
+        try {const results = await fetch(`https://api.sampleapis.com/coffee/${temperature}`)
+        const data = await results.json()
+        setCoffeeList(data);
+    } catch(err) {
+        alert(err);
+    }
+    }
     return (
         <>
          <button onClick={() => getCoffee('hot')}>HOT</button>
